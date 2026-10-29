@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RunSpriteRun + Sheet Converter</title>
+<meta name="description" content="Two free Windows tools for retro sprite animation: RunSpriteRun and its companion, the Sheet Converter.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap">
+<style>
+  body { margin: 0; background: #0b0d12; font-family: 'Inter', system-ui, sans-serif; }
+  a { color: #5ec9ff; text-decoration: none; }
+  a:hover { color: #8adcff; }
+  .kicker { font-family: 'Press Start 2P', monospace; letter-spacing: 0.04em; }
+  .display { font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; }
+  ::selection { background: #ff9828; color: #0b0d12; }
+</style>
+</head>
+<body>
+<div style="width: 100%; min-width: 320px; background: #0b0d12; color: #e7e9ee; display: flex; flex-direction: column;">
+
+  <!-- NAV -->
+  <div style="position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 18px clamp(20px, 5vw, 64px); background: rgba(11,13,18,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid #1d212b;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 10px; height: 10px; background: #ff9828; box-shadow: 4px 0 #3780cd, 0 4px #35c3d6, 4px 4px #e7e9ee;"></div>
+      <span class="display" style="font-weight: 700; font-size: 18px; color: #e7e9ee;">RunSpriteRun</span>
+    </div>
+    <div style="display: flex; gap: clamp(16px, 3vw, 28px); font-size: 14px; font-weight: 500;">
+      <a href="#runspriterun" style="color: #c3c9d6;">RunSpriteRun</a>
+      <a href="#converter" style="color: #c3c9d6;">Sheet Converter</a>
+      <a href="https://github.com/hlehmann-git" style="color: #c3c9d6;">GitHub</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 64px) clamp(56px, 7vw, 88px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center; justify-content: center; max-width: 1280px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+    <div style="flex: 999 1 420px; min-width: 0; max-width: 620px;">
+      <div class="kicker" style="font-size: 11px; color: #35c3d6; margin-bottom: 20px;">FREE &nbsp;·&nbsp; OFFLINE &nbsp;·&nbsp; WINDOWS</div>
+      <h1 class="display" style="font-size: clamp(34px, 5vw, 52px); line-height: 1.08; margin: 0 0 20px; font-weight: 700; color: #f4f5f7;">
+        Two free tools for <span style="color: #ff9828;">retro</span> sprite animation.
+      </h1>
+      <p style="font-size: 17px; line-height: 1.6; color: #a9b0c0; margin: 0 0 32px; max-width: 54ch;">
+        RunSpriteRun turns your pixel art into playable, keyboard-driven animations, kept inside the real colour
+        limits of classic 8-bit and 16-bit systems. Its companion, the Sheet Converter, gets any sprite sheet or
+        GIF ready to import.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="#runspriterun" style="display: inline-flex; align-items: center; gap: 8px; background: #ff9828; color: #1a1304; font-weight: 600; font-size: 15px; padding: 13px 22px; border-radius: 8px;">Get RunSpriteRun</a>
+        <a href="#converter" style="display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #e7e9ee; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 8px; border: 1px solid #353c4a;">Get the Sheet Converter</a>
+      </div>
+    </div>
+    <div style="flex: 1 1 320px; min-width: 280px; max-width: 460px; display: flex; justify-content: center;">
+      <img src="assets/brand.png" alt="RunSpriteRun: a pixel-art robot sprinting beside a pencil" style="width: 100%; max-width: 420px; border-radius: 14px; border: 1px solid #262b36;">
+    </div>
+  </div>
+
+  <!-- SYSTEMS STRIP -->
+  <div style="border-top: 1px solid #1d212b; border-bottom: 1px solid #1d212b; background: #0e1016;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 16px clamp(20px, 5vw, 64px); display: flex; align-items: baseline; gap: 10px; overflow-x: auto; white-space: nowrap;">
+      <span style="font-size: 11px; color: #6e7686; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; flex: 0 0 auto;">Systems Supported:</span>
+      <span style="font-size: 12.5px; color: #949cad;">Sega Genesis / Mega Drive &nbsp;&nbsp;·&nbsp;&nbsp; Super Nintendo (SNES) &nbsp;&nbsp;·&nbsp;&nbsp; Atari ST &nbsp;&nbsp;·&nbsp;&nbsp; Atari STE &nbsp;&nbsp;·&nbsp;&nbsp; Amiga &nbsp;&nbsp;·&nbsp;&nbsp; Apple IIgs &nbsp;&nbsp;·&nbsp;&nbsp; Commodore 64 &nbsp;&nbsp;·&nbsp;&nbsp; Apple II (Double Hi-Res)</span>
+    </div>
+  </div>
+
+  <!-- RUNSPRITERUN SECTION -->
+  <div id="runspriterun" style="max-width: 1280px; margin: 0 auto; width: 100%; box-sizing: border-box; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 56px;">
+    <div style="flex: 1 1 320px; min-width: 280px;">
+      <div class="kicker" style="font-size: 10px; color: #ff9828; margin-bottom: 14px;">APP ONE</div>
+      <h2 class="display" style="font-size: clamp(28px, 3.4vw, 38px); margin: 0 0 14px; font-weight: 700; color: #f4f5f7;">RunSpriteRun</h2>
+      <p style="font-size: 16px; line-height: 1.65; color: #a9b0c0; margin: 0 0 28px; max-width: 46ch;">
+        Bring in sprites as image files or a sheet, put the frames in order, group them into animations, and
+        <strong style="color: #e7e9ee;">run</strong> them with the keyboard to see how a character will move.
+      </p>
+      <div style="border: 1px solid #262b36; border-radius: 12px; overflow: hidden; background: #11141c; margin-bottom: 22px;">
+        <img src="assets/runspriterun-screenshot.png" alt="RunSpriteRun, running a demo sprite" style="display: block; width: 100%; height: auto;">
+      </div>
+      <a href="https://github.com/hlehmann-git/RunSpriteRun/releases/latest" style="display: inline-flex; align-items: center; gap: 8px; background: #ff9828; color: #1a1304; font-weight: 600; font-size: 15px; padding: 13px 22px; border-radius: 8px;">
+        Download the Windows installer
+      </a>
+    </div>
+    <div style="flex: 1 1 320px; min-width: 280px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+        <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(255,152,40,0.14); display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#ff9828" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">A palette and colour editor</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Colours snap to the system you chose, dragged into any order, added with one click, and kept until you delete them.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+        <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(255,152,40,0.14); display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#ff9828" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">The best colours for any system</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Import the same sprite into a different system and every pixel snaps to the nearest colour that system can actually show — so one piece of art can be prepped for the Mega Drive, the Amiga or the C64 without hand-picking a palette each time.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+        <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(255,152,40,0.14); display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#ff9828" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Up to 120 frames, grouped into animations</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Select, copy, paste and rename frames on a timeline, then group them into walk, jump, idle and more.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+        <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(255,152,40,0.14); display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#ff9828" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Run it with the keyboard</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Frame Group Control says which keys play which group, like a game controller — directions, combos, and rules for what happens on release.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+        <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(255,152,40,0.14); display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#ff9828" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">A full pixel editor</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Pencil, eraser, bucket, line, shapes, select and move, mirrored drawing, three layers, undo and redo.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+        <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(255,152,40,0.14); display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#ff9828" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Shrink Sprite and Reduce Palette</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Scale a project down or cut its colours, with a before/after preview.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+        <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(255,152,40,0.14); display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#ff9828" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Export sheets and rules</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">PNG sprite sheets plus a machine-readable rules file for your game.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONVERTER SECTION -->
+  <div id="converter" style="background: #0e1016; border-top: 1px solid #1d212b;">
+    <div style="max-width: 1280px; margin: 0 auto; width: 100%; box-sizing: border-box; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap-reverse; gap: 56px;">
+      <div style="flex: 1 1 320px; min-width: 280px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+          <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(55,128,205,0.16); display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#5ec9ff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Reads PNG, BMP, GIF and WebP sheets</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Finds the sprites automatically, lets you remove or group them, and writes one sheet per sprite size.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+          <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(55,128,205,0.16); display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#5ec9ff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Overlapping pieces merge on their own</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">A sprite split into several loose pieces — like a sparkle effect — is found and grouped as one, with a manual Merge and Split for the rest.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+          <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(55,128,205,0.16); display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#5ec9ff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Animated GIFs and WebPs, too</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Trims to the area that moves, drops frames you don&rsquo;t need, and finds pixel art enlarged by a whole number or a fraction, reducing it back to its real size.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+          <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(55,128,205,0.16); display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#5ec9ff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Cleans up lossy WebP colours</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">A lossy WebP, smudged by compression, can be cleaned back to a small palette using only colours already in the picture.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+          <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(55,128,205,0.16); display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#5ec9ff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Colours are never invented</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">Kept exactly as in the source; RunSpriteRun checks them against your chosen system on import.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start; background: #11141c; border: 1px solid #1d212b; border-radius: 10px; padding: 16px 18px;">
+          <div style="width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; background: rgba(55,128,205,0.16); display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2" stroke="#5ec9ff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-weight: 600; font-size: 14.5px; color: #e7e9ee; margin-bottom: 3px;">Reads RunSpriteRun&rsquo;s own sheets</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #949cad;">A sheet RunSpriteRun saved is recognised and read back box by box.</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex: 1 1 320px; min-width: 280px;">
+        <div class="kicker" style="font-size: 10px; color: #5ec9ff; margin-bottom: 14px;">APP TWO</div>
+        <h2 class="display" style="font-size: clamp(28px, 3.4vw, 38px); margin: 0 0 14px; font-weight: 700; color: #f4f5f7;">Sheet Converter</h2>
+        <p style="font-size: 16px; line-height: 1.65; color: #a9b0c0; margin: 0 0 28px; max-width: 46ch;">
+          Turn 3rd party sprite sheets or single animated Gifs / WebPs (from retro games and modern creations) into
+          RunSpriteRun files. Ready to import and edit.
+        </p>
+        <div style="border: 1px solid #262b36; border-radius: 12px; overflow: hidden; background: #0b0d12; margin-bottom: 22px;">
+          <img src="assets/sheetconverter-screenshot.jpg" alt="The Sheet Converter, finding sprites on a demo sheet" style="display: block; width: 100%; height: auto;">
+        </div>
+        <a href="https://github.com/hlehmann-git/RunSpriteRun-SheetConverter/releases/latest" style="display: inline-flex; align-items: center; gap: 8px; background: #3780cd; color: #f4f8ff; font-weight: 600; font-size: 15px; padding: 13px 22px; border-radius: 8px;">
+          Download the Windows installer
+        </a>
+        <div style="font-size: 13px; color: #6e7686; margin-top: 10px;">Free &nbsp;·&nbsp; open source &nbsp;·&nbsp; works offline</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top: 1px solid #1d212b; padding: 40px clamp(20px, 5vw, 64px) 52px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center;">
+      <div style="font-size: 13.5px; color: #6e7686;">Made by Harley Lehmann, with his buddy Claude.</div>
+      <div style="display: flex; gap: 22px; font-size: 13.5px; flex-wrap: wrap;">
+        <a href="https://github.com/hlehmann-git/RunSpriteRun" style="color: #8d94a5;">RunSpriteRun on GitHub</a>
+        <a href="https://github.com/hlehmann-git/RunSpriteRun-SheetConverter" style="color: #8d94a5;">Sheet Converter on GitHub</a>
+        <span style="color: #4d5362;">MIT licensed</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
